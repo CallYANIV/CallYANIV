@@ -1,79 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Call YANIV! – Official App Support</title>
-  <meta name="description" content="Official support page for the Call YANIV! mobile app. Learn more about the app, contact us, or view our privacy policy.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Call YANIV! — Official Support</title>
+  <meta name="description" content="Official support page for Call YANIV! — a clean, simple score tracker for the Yaniv card game." />
+  <meta property="og:title" content="Call YANIV! — Official Support" />
+  <meta property="og:description" content="Support, contact and privacy information for Call YANIV!" />
+  <meta property="og:type" content="website" />
   <style>
-    body {
-      font-family: "Inter", Arial, sans-serif;
-      max-width: 750px;
-      margin: 60px auto;
-      line-height: 1.6;
-      padding: 0 20px;
-      color: #1f1f1f;
-      background: linear-gradient(180deg, #ffffff 0%, #f4f8fb 100%);
+    :root{
+      --bg: #0b1220;
+      --bg-alt: #0e172a;
+      --card: #111a2e;
+      --text: #e6edf6;
+      --muted: #a9b7d0;
+      --brand: #3ec7e8;   /* turkis/blå */
+      --brand-2:#ff8c42;  /* myk oransje */
+      --ring: rgba(62,199,232,0.3);
+      --radius: 14px;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
     }
-    h1 {
-      color: #0077b6;
-      font-size: 2rem;
-      margin-bottom: 10px;
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7fafc;
+        --bg-alt:#ffffff;
+        --card:#ffffff;
+        --text:#0f172a;
+        --muted:#4b5563;
+        --brand:#0077b6;
+        --brand-2:#ff7a3d;
+        --ring: rgba(0,119,182,.15);
+        --shadow: 0 12px 28px rgba(16,24,40,.08);
+      }
     }
-    h2 {
-      margin-top: 35px;
-      color: #023e8a;
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, "Helvetica Neue", Arial, "Apple Color Emoji", "Segoe UI Emoji";
+      background:
+        radial-gradient(1200px 800px at 10% -10%, rgba(62,199,232,.25), transparent 60%),
+        radial-gradient(1000px 700px at 120% 10%, rgba(255,140,66,.18), transparent 50%),
+        linear-gradient(180deg,var(--bg),var(--bg-alt));
+      color:var(--text);
+      line-height:1.65;
     }
-    a {
-      color: #0077b6;
-      text-decoration: none;
+    .container{max-width:980px;margin:auto;padding:24px}
+    .nav{
+      display:flex;align-items:center;justify-content:space-between;
+      gap:16px;padding:10px 0;margin-bottom:8px;
     }
-    a:hover {
-      text-decoration: underline;
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--text)}
+    .logo{
+      width:40px;height:40px;border-radius:12px;
+      background: linear-gradient(135deg,var(--brand),var(--brand-2));
+      box-shadow: 0 6px 20px var(--ring);
+      display:grid;place-items:center;font-weight:800;color:#0b1220;
     }
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #555;
-      text-align: center;
-      border-top: 1px solid #ccc;
-      padding-top: 20px;
+    .brand span{font-weight:700;letter-spacing:.2px}
+    .nav a{color:var(--text);text-decoration:none;opacity:.85}
+    .nav a:hover{opacity:1}
+    .pill{
+      border:1px solid rgba(255,255,255,.12);
+      padding:6px 10px;border-radius:999px;font-size:.88rem
     }
-    .app-logo {
-      display: block;
-      margin: 0 auto 20px auto;
-      width: 120px;
-      height: 120px;
-      border-radius: 22px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    .hero{
+      margin-top:28px;border-radius:calc(var(--radius) + 4px);
+      background:
+        radial-gradient(800px 400px at 80% 0%, rgba(62,199,232,.08), transparent 40%),
+        linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.00));
+      padding:42px 28px;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.08)
     }
+    .hero h1{font-size: clamp(28px, 3.2vw, 40px);line-height:1.15;margin:0 0 10px}
+    .hero p{margin:0;color:var(--muted);max-width:62ch}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap;margin-top:22px}
+    .btn{
+      display:inline-block;padding:12px 16px;border-radius:10px;text-decoration:none;font-weight:600;
+      transition:transform .08s ease, box-shadow .08s ease, background .2s;
+    }
+    .btn-primary{
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color:#0b1220;box-shadow:0 8px 24px var(--ring);
+    }
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-ghost{
+      border:1px solid rgba(255,255,255,.16); color:var(--text); background:transparent
+    }
+    .grid{
+      display:grid;grid-template-columns:repeat(12,1fr);gap:18px;margin-top:30px
+    }
+    .card{
+      grid-column: span 12;
+      background:var(--card);border-radius:var(--radius);
+      padding:20px;border:1px solid rgba(255,255,255,.08);box-shadow:var(--shadow)
+    }
+    @media (min-width:720px){
+      .card--half{grid-column: span 6}
+      .card--third{grid-column: span 4}
+    }
+    .card h3{margin:0 0 6px}
+    .muted{color:var(--muted)}
+    .list{margin:10px 0 0 0;padding:0 0 0 18px}
+    footer{
+      margin:48px 0 12px;text-align:center;color:var(--muted);font-size:.95rem
+    }
+    .sep{height:1px;background:linear-gradient(90deg,transparent, rgba(255,255,255,.14), transparent);margin:26px 0}
+    code{background:rgba(255,255,255,.08);padding:2px 6px;border-radius:6px}
   </style>
 </head>
 <body>
-  
-  <h1>Call YANIV!</h1>
-  <p><strong>Welcome to the official support page for Call YANIV!</strong></p>
+  <div class="container">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="#">
+        <div class="logo">CY</div>
+        <span>Call YANIV!</span>
+      </a>
+      <div style="display:flex;gap:14px;align-items:center;">
+        <a class="pill" href="privacy.html">Privacy</a>
+        <a class="pill" href="mailto:callyaniv@gmail.com">Contact</a>
+      </div>
+    </nav>
 
-  <p><em>Call YANIV!</em> is a simple and fun score-tracking app for the popular card game Yaniv.  
-  Keep track of player names, points, and round results with ease — no more messy paper notes!</p>
+    <header class="hero">
+      <p class="pill" style="display:inline-block;background:rgba(62,199,232,.12);border:none;color:var(--brand);font-weight:600;">Official Support</p>
+      <h1>Simple, clean score tracking for the Yaniv card game.</h1>
+      <p>Call YANIV! helps you track players, rounds and totals without messy notes. Fast to start, easy to use, and privacy-friendly.</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="mailto:callyaniv@gmail.com">Email Support</a>
+        <a class="btn btn-ghost" href="privacy.html">View Privacy Policy</a>
+      </div>
+    </header>
 
-  <h2>Contact Support</h2>
-  <p>If you experience issues, have feedback, or need assistance, please contact our team:</p>
-  <p>Email: <a href="mailto:callyaniv@gmail.com">callyaniv@gmail.com</a></p>
+    <section class="grid" aria-label="Highlights">
+      <article class="card card--third">
+        <h3>⚡ Fast & Focused</h3>
+        <p class="muted">Add players, record rounds, and see totals instantly—no clutter.</p>
+      </article>
+      <article class="card card--third">
+        <h3>🔒 Private by Design</h3>
+        <p class="muted">All data stays on your device. No accounts, no tracking, no ads.</p>
+      </article>
+      <article class="card card--third">
+        <h3>🃏 Made for Yaniv</h3>
+        <p class="muted">Built around the Yaniv flow: quick calls, penalties, and clean history.</p>
+      </article>
+    </section>
 
-  <h2>Privacy Policy</h2>
-  <p>We value your privacy. You can read our full privacy policy here:</p>
-  <p><a href="privacy.html">View Privacy Policy</a></p>
+    <div class="sep" role="separator" aria-hidden="true"></div>
 
-  <h2>About the App</h2>
-  <p>Version: <strong>1.0.0</strong><br>
-     Developer: <strong>CallYANIV Team</strong><br>
-     Platform: iOS</p>
+    <section class="grid" aria-label="About">
+      <article class="card card--half">
+        <h3>Support</h3>
+        <p class="muted">Questions, bugs or ideas? We read every message.</p>
+        <p><strong>Email:</strong> <a href="mailto:callyaniv@gmail.com">callyaniv@gmail.com</a></p>
+      </article>
+      <article class="card card--half">
+        <h3>App Info</h3>
+        <ul class="list muted">
+          <li><strong>Platform:</strong> iOS</li>
+          <li><strong>Version:</strong> 1.0.0</li>
+          <li><strong>Developer:</strong> CallYANIV Team</li>
+        </ul>
+      </article>
+    </section>
 
-  <footer>
-    © 2025 Call YANIV! All rights reserved.  
-    <br>
-    <a href="https://github.com/callyaniv">GitHub</a> • <a href="privacy.html">Privacy Policy</a>
-  </footer>
+    <footer>
+      © 2025 Call YANIV! · <a href="privacy.html" style="color:inherit">Privacy</a> · <a href="mailto:callyaniv@gmail.com" style="color:inherit">Contact</a>
+    </footer>
+  </div>
 </body>
 </html>
