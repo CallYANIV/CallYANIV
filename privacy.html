@@ -1,74 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Call YANIV! – Privacy Policy</title>
-  <meta name="description" content="Privacy policy for the Call YANIV! mobile app. Learn how we handle data and protect your privacy.">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Call YANIV! — Privacy Policy</title>
+  <meta name="description" content="Privacy Policy for Call YANIV! Score Tracker." />
   <style>
-    body {
-      font-family: "Inter", Arial, sans-serif;
-      max-width: 750px;
-      margin: 60px auto;
-      line-height: 1.6;
-      padding: 0 20px;
-      color: #1f1f1f;
-      background: linear-gradient(180deg, #ffffff 0%, #f4f8fb 100%);
+    :root{
+      --bg: #0b1220; --bg-alt: #0e172a; --card: #111a2e;
+      --text:#e6edf6; --muted:#a9b7d0;
+      --brand:#3ec7e8; --brand-2:#ff8c42; --ring: rgba(62,199,232,0.3);
+      --radius:14px; --shadow:0 10px 30px rgba(0,0,0,.35);
     }
-    h1 {
-      color: #0077b6;
-      font-size: 2rem;
-      margin-bottom: 10px;
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f7fafc; --bg-alt:#ffffff; --card:#ffffff;
+        --text:#0f172a; --muted:#4b5563; --brand:#0077b6; --brand-2:#ff7a3d; --ring: rgba(0,119,182,.15);
+        --shadow:0 12px 28px rgba(16,24,40,.08);
+      }
     }
-    h2 {
-      margin-top: 30px;
-      color: #023e8a;
+    *{box-sizing:border-box}
+    body{
+      margin:0;font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Inter, Arial;
+      background:
+        radial-gradient(1100px 600px at 90% -10%, rgba(62,199,232,.22), transparent 50%),
+        radial-gradient(900px 600px at -10% 0%, rgba(255,140,66,.15), transparent 40%),
+        linear-gradient(180deg,var(--bg),var(--bg-alt));
+      color:var(--text); line-height:1.7;
     }
-    a {
-      color: #0077b6;
-      text-decoration: none;
+    .container{max-width:900px;margin:auto;padding:26px}
+    .card{
+      background:var(--card); border:1px solid rgba(255,255,255,.08);
+      border-radius:var(--radius); padding:28px; box-shadow:var(--shadow)
     }
-    a:hover {
-      text-decoration: underline;
+    h1{margin:0 0 8px;font-size:clamp(26px,3vw,36px); color:var(--brand)}
+    h2{margin:28px 0 8px}
+    p, li{color:var(--text)}
+    .muted{color:var(--muted)}
+    a{color:var(--brand);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .top{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;align-items:center;margin-bottom:16px}
+    .badge{
+      padding:6px 10px;border-radius:999px;background:rgba(62,199,232,.12);color:var(--brand);
+      border:1px solid rgba(62,199,232,.22);font-weight:600
     }
-    footer {
-      margin-top: 60px;
-      font-size: 0.9rem;
-      color: #555;
-      text-align: center;
-      border-top: 1px solid #ccc;
-      padding-top: 20px;
-    }
+    footer{margin:26px 0 6px;text-align:center;color:var(--muted)}
   </style>
 </head>
 <body>
-  <h1>Privacy Policy</h1>
-  <p><strong>Last updated:</strong> November 2025</p>
+  <div class="container">
+    <div class="top">
+      <div class="badge">Privacy Policy</div>
+      <a href="index.html">← Back to Support</a>
+    </div>
+    <article class="card">
+      <h1>Call YANIV! — Privacy Policy</h1>
+      <p class="muted"><strong>Last updated:</strong> November 2025</p>
 
-  <p>This privacy policy explains how the <em>Call YANIV!</em> mobile app handles user information.</p>
+      <p>This Privacy Policy explains how <em>Call YANIV!</em> handles information. We designed the app to be private by default.</p>
 
-  <h2>Information We Collect</h2>
-  <p><em>Call YANIV!</em> does not collect, store, or share any personal data.  
-     All game data, including player names and scores, is stored locally on your device and permanently deleted when the app is uninstalled.</p>
+      <h2>Information We Collect</h2>
+      <p><strong>We do not collect, store, or share any personal data.</strong> All game information (e.g., player names, scores, round history) is stored locally on your device and is permanently removed when you uninstall the app.</p>
 
-  <h2>Analytics and Tracking</h2>
-  <p>The app does not use analytics, advertising, or third-party tracking tools.</p>
+      <h2>Analytics, Ads & Tracking</h2>
+      <p>The app does not use analytics, advertising, third-party SDKs, or tracking technologies.</p>
 
-  <h2>Data Security</h2>
-  <p>Because no personal data is collected or transmitted, there are no external servers or databases involved.  
-     All processing happens directly on your device.</p>
+      <h2>Data Processing & Security</h2>
+      <ul>
+        <li>All processing happens on your device; no external servers or databases are used.</li>
+        <li>No network transmission of your game data occurs.</li>
+      </ul>
 
-  <h2>Changes to This Policy</h2>
-  <p>If we make updates to this privacy policy, the new version will be published on this page with a revised “Last updated” date.</p>
+      <h2>Children’s Privacy</h2>
+      <p>The app does not collect any personal information from anyone, including children under 13.</p>
 
-  <h2>Contact</h2>
-  <p>If you have any questions or concerns about privacy, please contact us at:<br>
-  <a href="mailto:callyaniv@gmail.com">callyaniv@gmail.com</a></p>
+      <h2>Changes to This Policy</h2>
+      <p>If we update this Policy, we will publish the new version on this page and revise the “Last updated” date above.</p>
 
-  <p><a href="index.html">← Back to Support Page</a></p>
+      <h2>Contact</h2>
+      <p>Questions about privacy? Contact us at <a href="mailto:callyaniv@gmail.com">callyaniv@gmail.com</a>.</p>
+    </article>
 
-  <footer>
-    © 2025 Call YANIV! All rights reserved.
-  </footer>
+    <footer>
+      © 2025 Call YANIV! · <a href="index.html" style="color:inherit">Support</a>
+    </footer>
+  </div>
 </body>
 </html>
